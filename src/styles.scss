@@ -1,11 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+// Fonts
+$base_fonts: Roboto, "Helvetica Neue", sans-serif;
+$font_weight: 700;
+// Colors
+$background: #323a45;
+$body_background: #151515;
+$color_primary: #3f51b5;
+$color_secondary: #ffffff;
+// Alignment
+$full: 100%;
+$max_width: 1200px;
+// Animations
+$duration: 0.3s;
 
-html,
 body {
-    height: 100%;
+    font-family: $base_fonts;
+    background-color: $body_background;
+    padding-top: 60px;
+    max-height: $full;
+    overflow: hidden;
+    height: 100vh;
 }
-body {
+body * {
+    font-family: $base_fonts;
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
