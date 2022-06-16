@@ -105,9 +105,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "groupomania_front_V2"
+  "defaultProject": "groupomania_front_V2",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
