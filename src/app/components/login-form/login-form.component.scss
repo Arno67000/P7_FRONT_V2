@@ -1,0 +1,14 @@
+.formContainer {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 2% auto;
+}
+.formField {
+    border-radius: 20px;
+    &-hideButton {
+        border-style: none;
+        background-color: inherit;
+    }
+}

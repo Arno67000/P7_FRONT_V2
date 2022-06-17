@@ -1,0 +1,29 @@
+<form class="formContainer" [formGroup]="loginForm" (ngSubmit)="onSubmitLoginForm()">
+    <mat-form-field class="formField">
+        <mat-label>Enter your login</mat-label>
+        <input matInput formControlName="login" />
+    </mat-form-field>
+    <mat-form-field class="formField">
+        <mat-label>Enter your password</mat-label>
+        <input
+            matInput
+            [type]="hide ? 'password' : 'text'"
+            placeholder="Password must contain 8 characters including: 1 uppercase, 1 lowercase, 1 number AND a symbol"
+            formControlName="password"
+        />
+        <button
+            class="formField-hideButton"
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+        >
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+    </mat-form-field>
+    <button mat-button class="formContainer-submitButton" color="primary" type="submit" [disabled]="loginForm.invalid">
+        Enter
+    </button>
+</form>
+
